@@ -1,9 +1,9 @@
 package com.example.Demoproject;
 
-class hey extends Thread {
+class yo implements Runnable {
     public void run() {
         for (int i = 1; i < 6; i++) {
-            System.out.println("hey");
+            System.out.println("yo");
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
@@ -12,10 +12,10 @@ class hey extends Thread {
     }
 
 }
-class hello extends Thread {
+class hai implements Runnable {
     public void run() {
         for (int i = 1; i < 6; i++) {
-            System.out.println("hello");
+            System.out.println("hai");
             try {
                 Thread.sleep(1000);
             } catch (Exception e) {
@@ -25,20 +25,22 @@ class hello extends Thread {
 
 }
 
-public class Threaddemo{
+public class runnableinterface{
     public static void main(String[] args){
-        hey obj1=new hey();
-        hello obj2=new hello();
+        Runnable obj1=new yo();
+        Runnable obj2=new hai();
 
-        obj1.start();
+        Thread t1=new Thread(obj1);
+        Thread t2=new Thread(obj2);
+
+        t1.start();
         try {
             Thread.sleep(1000);
         }
         catch(Exception ignored){}
-        obj2.start();
+        t2.start();
 
     }
 
 }
-
 
