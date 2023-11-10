@@ -18,7 +18,6 @@ public class stringmanipulation {
         System.out.println("Contains sequence 'tar': " + str_Sample2.contains("va"));
         System.out.println("Contains sequence 'tar': " + str_Sample2.contains("cd"));
 
-
         String str_Sample3 = "Janaki";
         System.out.println("Replace 'Janaki' with 'Puvvada': " + str_Sample3.replace("Janaki", "Puvvada"));
 
