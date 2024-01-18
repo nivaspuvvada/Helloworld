@@ -1,0 +1,28 @@
+package org.example;
+
+import java.util.Enumeration;
+import java.util.*;
+
+public class enumcollection {
+    public static void main(String[] args){
+//        Stack<String> s= new Stack<>();
+//        s.add("Nivas");
+//        s.add("Rao");
+//        s.add("Puvvada");
+//
+//        Enumeration<String> e= s.elements();
+//        while(e.hasMoreElements()){
+//            System.out.println(e.nextElement());
+
+
+            Hashtable<String, Integer> ages= new Hashtable<>();
+            ages.put("Nivas",25) ;
+            ages.put("Hruthik",23);
+            ages.put("Rajani",46);
+
+            Enumeration<Integer> e= ages.elements();
+            while(e.hasMoreElements()){
+                System.out.println(e.nextElement());
+        }
+    }
+}
